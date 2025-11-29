@@ -1,5 +1,3 @@
-# Tst Marker for deploy
-
 import json
 import logging
 import os
