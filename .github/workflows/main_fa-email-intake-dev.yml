@@ -7,12 +7,17 @@ on:
   workflow_dispatch:
 
 env:
-  PYTHON_VERSION: "3.13"
+  PYTHON_VERSION: "3.12"
   FUNCTIONAPP_NAME: "fa-email-intake-dev"
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    # This is the missing piece
+    permissions:
+      id-token: write      # needed for azure/login with OIDC
+      contents: read       # needed for checkout
 
     steps:
       - name: Checkout repository
