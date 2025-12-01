@@ -14,3 +14,5 @@ local.settings.json
 
 # VS Code
 .vscode/
+
+.DS_Store
