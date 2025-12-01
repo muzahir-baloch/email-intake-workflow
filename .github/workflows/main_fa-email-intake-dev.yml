@@ -14,7 +14,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    # This is the missing piece
     permissions:
       id-token: write      # needed for azure/login with OIDC
       contents: read       # needed for checkout
